@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-lg font-bold text-white">SAIBOR ALI</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="text-gray-400 hover:text-white">Home</a>
+                <a href="/about" class="text-gray-400 hover:text-white">About</a>
+                <a href="/licence" class="text-gray-400 hover:text-white">License</a>
+                <a href="/contact" class="text-gray-400 hover:text-white">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-2 px-4">
+            <a href="/" class="text-gray-400 hover:text-white">Home</a>
+            <a href="/about" class="text-gray-400 hover:text-white">About</a>
+            <a href="/licence" class="text-gray-400 hover:text-white">License</a>
+            <a href="/contact" class="text-gray-400 hover:text-white">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto bg-gray-900 shadow-lg p-8 rounded-lg">
+      <h1 class="text-2xl font-bold text-white-800 mb-4 text-center sm:text-left">About Me</h1>
+      <p class="text-white-800 leading-relaxed text-justify">
+        As a seasoned professional in the construction industry, I specialize in a comprehensive range of services that cater to all your building needs. With years of experience as a building constructor, labor contractor, and piling contractor, I am committed to delivering high-quality and durable construction projects that stand the test of time. Whether you're planning to build a new residential or commercial property, require skilled labor for your ongoing projects, or need expert piling solutions to ensure the stability and safety of your structures, I am here to provide you with the expertise and resources you need.
+      </p>
+      <p class="text-white-800 leading-relaxed text-justify mt-4">
+        In addition to my construction and contracting services, I also offer a wide array of building materials to meet the specific demands of your projects. From foundation materials to finishing supplies, I ensure that only the best and most reliable materials are used, guaranteeing the longevity and quality of your construction work.
+      </p>
+      <p class="text-white-800 leading-relaxed text-justify mt-4">
+        I approach every job with meticulous attention to detail and a commitment to excellence. Exceed expectations while adhering to strict timelines and budgets.
+        For those in need of reliable and efficient construction services or high-quality building materials, I am ready to collaborate with you to bring your vision to life. Please feel free to reach out to discuss your project requirements and explore how I can assist in making your construction goals a reality. Your satisfaction and the success of your project are my top priorities.
+      </p>
+  </div>
+
+    <script>
+        // Toggle mobile menu visibility
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
