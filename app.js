@@ -20,13 +20,13 @@ app.get("/about", (req, res) => {
 //LICENCE PAGE--------
 
 app.get("/licence", (req, res) => {
-  res.render("licence")
+  res.render("licence");
 });
 
 //CONTACT PAGE-------
 
 app.get("/contact", (req, res) => {
-  res.render("contact")
+  res.render("contact");
 });
 
 app.listen(3000);

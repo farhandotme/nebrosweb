@@ -44,7 +44,7 @@
         <!-- Right side: Paragraph -->
         <div class="w-full sm:w-1/2 text-center sm:text-left">
             <p class="text-gray-300 leading-relaxed">
-                Welcome to my website. I am Saibor ali(Nebros) which has 17 years of experience of a construction builder and and labour contactor. <a class="text-red-200" href="/about">Read More</a>
+                Welcome to my website. I am Saibor Ali(Nebros) which has 17 years of experience as construction builder and and labour contactor. <a class="text-red-200" href="/about">Read More</a>
             </p>
         </div>
     </div>
@@ -54,14 +54,19 @@
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-6 text-white">Contact Us</h2>
             <div class="max-w-lg mx-auto bg-gray-700 p-6 rounded-lg shadow-lg">
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="ac44e9b6-acdc-4d1f-93d7-00d832da850d">
                     <div class="mb-4">
                         <label for="name" class="block text-gray-300">Name</label>
-                        <input type="text" placeholder="Enter your Name..." id="name" name="name" class="w-full px-4 py-2 border border-gray-600 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-200">
+                        <input required type="text" placeholder="Enter your Name..." id="name" name="name" class="w-full px-4 py-2 border border-gray-600 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-200">
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-gray-300">Email</label>
-                        <input placeholder="Enter your Email..." type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-600 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-200">
+                        <input required placeholder="Enter your Email..." type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-600 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-200">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-300">Phone Number</label>
+                        <input required placeholder="Enter your Email..." type="phone" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-600 bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-200">
                     </div>
                     <div class="mb-4">
                         <label for="message" class="block text-gray-300">Message</label>
