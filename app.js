@@ -23,6 +23,12 @@ app.get("/licence", (req, res) => {
   res.render("licence");
 });
 
+//GALLERY PAGE--------
+
+app.get("/Gallery", (req, res) => {
+  res.render("gallery");
+});
+
 //CONTACT PAGE-------
 
 app.get("/contact", (req, res) => {

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Photos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional styles for popup and responsiveness */
+        .popup {
+            display: none; /* Ensure the popup is hidden initially */
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .popup img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .grid-gallery img {
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .grid-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-lg font-bold text-white">J.P TRADERS</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="text-gray-400 hover:text-white">Home</a>
+                <a href="/about" class="text-gray-400 hover:text-white">About</a>
+                <a href="/licence" class="text-gray-400 hover:text-white">License</a>
+                <a href="/gallery" class="text-gray-400 hover:text-white">Gallery</a>
+                <a href="/contact" class="text-gray-400 hover:text-white">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-2 px-4">
+            <a href="/" class="text-gray-400 hover:text-white">Home</a>
+            <a href="/about" class="text-gray-400 hover:text-white">About</a>
+            <a href="/licence" class="text-gray-400 hover:text-white">License</a>
+            <a href="/gallery" class="text-gray-400 hover:text-white">Gallery</a>
+            <a href="/contact" class="text-gray-400 hover:text-white">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container mx-auto py-8">
+        <h2 class="text-3xl font-bold text-center mb-6 text-white">Gallery</h2>
+        <div class="grid-gallery">
+            <img src="/images/gallery1.jpg" alt="Gallery Image 1" onclick="openPopup('/images/gallery1.jpg')" />
+            <img src="/images/gallery2.jpg" alt="Gallery Image 2" onclick="openPopup('/images/gallery2.jpg')" />
+            <img src="/images/gallery3.jpg" alt="Gallery Image 3" onclick="openPopup('/images/gallery3.jpg')" />
+            <img src="/images/gallery4.jpg" alt="Gallery Image 4" onclick="openPopup('/images/gallery4.jpg')" />
+            <img src="/images/gallery5.jpg" alt="Gallery Image 5" onclick="openPopup('/images/gallery5.jpg')" />
+            <img src="/images/gallery6.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery6.jpg')" />
+            <img src="/images/gallery7.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery7.jpg')" />
+            <img src="/images/gallery8.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery8.jpg')" />
+            <img src="/images/gallery9.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery9.jpg')" />
+            <img src="/images/gallery10.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery10.jpg')" />
+            <img src="/images/gallery11.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery11.jpg')" />
+            <img src="/images/gallery12.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery12.jpg')" />
+            <img src="/images/gallery13.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery13.jpg')" />
+            <img src="/images/gallery14.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery14.jpg')" />
+            <img src="/images/gallery15.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery15.jpg')" />
+            <img src="/images/gallery16.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery16.jpg')" />
+            <img src="/images/gallery17.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery17.jpg')" />
+            <img src="/images/gallery18.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery18.jpg')" />
+            <img src="/images/gallery19.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery19.jpg')" />
+            <img src="/images/gallery20.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery20.jpg')" />
+            <img src="/images/gallery21.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery21.jpg')" />
+            <img src="/images/gallery22.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery22.jpg')" />
+            <img src="/images/gallery23.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery23.jpg')" />
+            <img src="/images/gallery24.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery24.jpg')" />
+            <img src="/images/gallery25.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery25.jpg')" />
+            <img src="/images/gallery26.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery26.jpg')" />
+            <img src="/images/gallery27.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery27.jpg')" />
+            <img src="/images/gallery28.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery28.jpg')" />
+            <img src="/images/gallery29.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery29.jpg')" />
+            <img src="/images/gallery30.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery30.jpg')" />
+            <img src="/images/gallery31.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery31.jpg')" />
+            <img src="/images/gallery32.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery32.jpg')" />
+            <img src="/images/gallery33.jpg" alt="Gallery Image 6" onclick="openPopup('/images/gallery33.jpg')" />
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- Popup for Gallery Images -->
+    <div id="popup" class="popup flex">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <img id="popup-img" src="" alt="Popup Image">
+        </div>
+    </div>
+
+    <script>
+        // Ensure the popup does not display on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        // Toggle mobile menu visibility
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Open popup with image
+        function openPopup(imageSrc) {
+            document.getElementById('popup-img').src = imageSrc;
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        // Close popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
